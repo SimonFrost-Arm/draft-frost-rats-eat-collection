@@ -7,7 +7,7 @@
 <title>Entity Attestation Token (EAT) Collection Type</title>
 <meta content="Simon Frost" name="author">
 <meta content="
-       The default top-level definitions for an EAT   assume a hierarchy involving a leading signer within the Attestee. Some token use cases do not match that model. This specification defines an extension to EAT allowing the top-level of the token to consist of a collection of otherwise defined tokens. 
+       The default top-level definitions for an EAT   assume a hierarchy involving a leading signer within the Attester. Some token use cases do not match that model. This specification defines an extension to EAT allowing the top-level of the token to consist of a collection of otherwise defined tokens. 
     " name="description">
 <meta content="xml2rfc 3.12.7" name="generator">
 <meta content="EAT" name="keyword">
@@ -1014,11 +1014,11 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">EAT Collection</td>
-<td class="right">May 2022</td>
+<td class="right">June 2022</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Frost</td>
-<td class="center">Expires 1 December 2022</td>
+<td class="center">Expires 3 December 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1031,12 +1031,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-frost-rats-eat-collection-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-05-30" class="published">30 May 2022</time>
+<time datetime="2022-06-01" class="published">1 June 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-12-01">1 December 2022</time></dd>
+<dd class="expires"><time datetime="2022-12-03">3 December 2022</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1049,7 +1049,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <h1 id="title">Entity Attestation Token (EAT) Collection Type</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">The default top-level definitions for an EAT <span>[<a href="#I-D.ietf-rats-eat" class="xref">I-D.ietf-rats-eat</a>]</span> assume a hierarchy involving a leading signer within the Attestee. Some token use cases do not match that model. This specification defines an extension to EAT allowing the top-level of the token to consist of a collection of otherwise defined tokens.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">The default top-level definitions for an EAT <span>[<a href="#I-D.ietf-rats-eat" class="xref">I-D.ietf-rats-eat</a>]</span> assume a hierarchy involving a leading signer within the Attester. Some token use cases do not match that model. This specification defines an extension to EAT allowing the top-level of the token to consist of a collection of otherwise defined tokens.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1082,7 +1082,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 1 December 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 3 December 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1178,6 +1178,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <p id="section-3-1">The proposed extension for the top-level definition is to add a 'Token Collection' type. The contents of the type are a map of CWTs (JWTs). The DEB top-level entry for EAT is included for completeness, and the UCCS extension can also be embraced, though the use cases for these have not been explored. The identification of collection members and the intra collection integrity mechanism is considered usage specific. A verifier will be expected to extract each of the members of the collection and check their validity both individually and as a set.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">A map was chosen rather than an unbounded array to give the opportunity to add identifying map tags to each entry. The interpretation of the tags will be usage specific, but may correspond to registered identities of specific token types. To assist a verifier correlate the expected contents a profile entry can be added as the 'profile-label' identity in the map.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">See <a href="#cddl" class="xref">Appendix A</a> for a CDDL <span>[<a href="#RFC8610" class="xref">RFC8610</a>]</span> description of the proposed extension.<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">While most of the use cases for collections are for scenarios where there will be at least two entries in a collection, the CDDL allows for &gt;= 1 entries in a collection to allow for the scenario where only one entry is currently available even though the normal set is larger.<a href="#section-3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1286,39 +1287,44 @@ $$EAT-CBOR-Untagged-Token /= TL-Collection
 Tagged-Collection =  #6.TBD399(TL-Collection)
 TL-Collection = CWT-Collection / JWT-Collection / DEB-Collection
 
+; Note that although the common use cases for collections are for at least two entries in a collection,
+; the CDDL below allows for &gt;= 1 entry to allow the scenario where only one entry is currently available even
+; though the normal set is larger
+
 CWT-Collection = {
     ? eat-collection-identifier,
-    2* cwt-collection-entries
+    + cwt-collection-entries
 }
 
 JWT-Collection = {
     ? eat-collection-identifier,
-    2* jwt-collection-entries
+    + jwt-collection-entries
 }
 
 DEB-Collection= {
     ? eat-collection-identifier,
-    2* DEB-collection-entries
+    + DEB-collection-entries
 }
+
 
 eat-collection-identifier = (
     profile-label =&gt; general-uri / general-oid
 )
 
 cwt-collection-entries = (
-    collection-entry-label =&gt; CWT
+    collection-entry-label =&gt; CWT-Messages
 )
 
 jwt-collection-entries = (
-    collection-entry-label =&gt; JWT
+    collection-entry-label =&gt; JWT-Messages
 )
 
 DEB-collection-entries = (
-    collection-entry-label =&gt; DEB
+    collection-entry-label =&gt; DEB-Messages
 )
 
 collection-entry-label = JC&lt;text, int&gt;
-CWT = bstr .cbor CWT-placeholder
+
 
 </pre><a href="#appendix-A-1" class="pilcrow">¶</a>
 </div>
