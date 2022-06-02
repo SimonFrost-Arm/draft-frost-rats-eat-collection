@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-05-31T00:43:30.393442+00:00",
+  "timestamp": "2022-06-02T00:50:36.896782+00:00",
   "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
   "labels": [
     {
@@ -49,6 +49,72 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
-  "pulls": []
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOHZRuu85KvJC9",
+      "title": "Suggestion to change min # of collection entries to 1",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/1",
+      "state": "CLOSED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "SimonFrost-Arm"
+      ],
+      "labels": [],
+      "body": "Per Carl Wallace feedback:\r\nSuggest changing the minimum number of *-collection-entries from 2 to 1 to allow for the case where normally there are several items but it is possible only one is available. \r\n",
+      "createdAt": "2022-05-31T13:28:40Z",
+      "updatedAt": "2022-06-01T11:11:35Z",
+      "closedAt": "2022-06-01T11:11:35Z",
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOHZRuu85KvKXT",
+      "title": "Remove placeholder CDDL from doc",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/2",
+      "state": "CLOSED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "SimonFrost-Arm"
+      ],
+      "labels": [],
+      "body": "BUG CWT placeholder present in doc  (and above placeholder comment in CDDL file).  \r\nConsider resolution to change to include <eat combined CDDL>\r\n",
+      "createdAt": "2022-05-31T13:32:54Z",
+      "updatedAt": "2022-06-01T11:11:17Z",
+      "closedAt": "2022-06-01T11:11:17Z",
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOHZRuu8441yza",
+      "title": "Address issues #1 and #2 from public review of draft-00",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/3",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-06-01T11:09:52Z",
+      "updatedAt": "2022-06-01T11:10:44Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "7ac911b5d001a234f8287058609475be798d4fb1",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "draft1",
+      "headRefOid": "1c2f6c65d129e7ca8b6721eb6d0f49e5e58633e8",
+      "closedAt": "2022-06-01T11:10:39Z",
+      "mergedAt": "2022-06-01T11:10:39Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "52fe05f25df41ef6e057bff2dde4357411f32db8"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
