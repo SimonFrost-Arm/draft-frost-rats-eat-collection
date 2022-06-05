@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-06-02T00:50:36.896782+00:00",
+  "timestamp": "2022-06-05T00:48:10.456338+00:00",
   "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
   "labels": [
     {
@@ -84,6 +84,22 @@
       "createdAt": "2022-05-31T13:32:54Z",
       "updatedAt": "2022-06-01T11:11:17Z",
       "closedAt": "2022-06-01T11:11:17Z",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOHZRuu85LJFkH",
+      "title": "Support Mixed format collections",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/4",
+      "state": "OPEN",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Per Laurence Lundblade review on RATS list: \"EAT collections don\u2019t support mixed devices. It\u2019s hard to tell right now if this will be a problem. Most folks are oriented around CBOR tokens, but JSON is very widely used.\"\r\nand a suggestion to look at the Nested Token CDDL in EAT to see if that provides the appropriate generality",
+      "createdAt": "2022-06-04T07:27:21Z",
+      "updatedAt": "2022-06-04T07:28:07Z",
+      "closedAt": null,
       "comments": []
     }
   ],
