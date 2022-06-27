@@ -9,27 +9,27 @@
 <meta content="
        The default top-level definitions for an EAT   assume a hierarchy involving a leading signer within the Attester. Some token use cases do not match that model. This specification defines an extension to EAT allowing the top-level of the token to consist of a collection of otherwise defined tokens. 
     " name="description">
-<meta content="xml2rfc 3.12.7" name="generator">
+<meta content="xml2rfc 3.12.10" name="generator">
 <meta content="EAT" name="keyword">
 <meta content="collection container" name="keyword">
 <meta content="draft-frost-rats-eat-collection-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.12.7
-    Python 3.9.7
+  xml2rfc 3.12.10
+    Python 3.10.4
     appdirs 1.4.4
-    ConfigArgParse 1.3
+    ConfigArgParse 1.5.3
     google-i18n-address 2.5.1
     html5lib 1.1
     intervaltree 3.1.0
     Jinja2 2.11.3
     kitchen 1.2.6
-    lxml 4.6.5
+    lxml 4.8.0
     MarkupSafe 2.0.1
     pycountry 20.7.3
-    pyflakes 2.3.1
-    PyYAML 5.4.1
-    requests 2.26.0
-    setuptools 52.0.0
+    pyflakes 2.4.0
+    PyYAML 6.0
+    requests 2.27.1
+    setuptools 59.4.0
     six 1.16.0
 -->
 <link href="draft-frost-rats-eat-collection.xml" rel="alternate" type="application/rfc+xml">
@@ -154,6 +154,14 @@
   font-weight: 700;
   font-display: swap;
   src: local('Lora Bold'), local('Lora-Bold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-bold-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Lora SemiBold'), local('Lora-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/lora-semibold-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -337,7 +345,7 @@ ol, ul {
   padding: 0;
   margin: 0 0 0.5em 2em;
 }
-ol ol, ul ul, ol ul, ul ol {
+:is(ol, ul) :is(ol, ul) {
   margin-left: 1em;
 }
 li {
@@ -352,8 +360,7 @@ ul.empty, .ulEmpty {
 ul.empty li, .ulEmpty li {
   margin-top: 0.5em;
 }
-ul.compact, .ulCompact,
-ol.compact, .olCompact {
+:is(ul, ol).compact, .ulCompact, .olCompact {
   line-height: 100%;
   margin: 0 0 0 2em;
 }
@@ -369,7 +376,7 @@ dl > dd {
   margin-bottom: .8em;
   min-height: 1.3em;
 }
-dl.compact > dd, .dlCompact > dd {
+:is(dl.compact, .dlCompact) > dd {
   margin-bottom: 0em;
 }
 dl > dd > dl {
@@ -411,6 +418,9 @@ tt, code {
      remove leading to avoid altering the final height of lines */
   line-height: 0;
 }
+:is(h1, h2, h3, h4, h5, h6) :is(tt, code) {
+  font-size: 84%;
+}
 pre {
   border: 1px solid var(--line-color);
   font-size: 13.5px;
@@ -435,6 +445,19 @@ figcaption, caption {
   text-align: left;
 }
 @media screen {
+  /* Auto-collapse boilerplate. */
+  :is(#status-of-memo, #copyright) p {
+    margin: -2px 0;
+    max-height: 0;
+    transition: max-height 2s ease, margin 0.5s ease 0.5s;
+    overflow: hidden;
+  }
+  :is(#status-of-memo, #copyright):hover p,
+  :is(#status-of-memo, #copyright) h2:target ~ p {
+    margin: 0.5em 0;
+    max-height: 500px;
+    overflow: auto;
+  }
   pre, svg {
     display: inline-block;
     overflow-x: auto;
@@ -450,7 +473,7 @@ figcaption, caption {
     display: block;
     width: calc(100% - 25px);
   }
-  pre + .pilcrow, svg + .pilcrow {
+  :is(pre, svg) + .pilcrow {
     display: inline-block;
     vertical-align: text-bottom;
     padding-bottom: 8px;
@@ -499,17 +522,11 @@ th, td {
 th {
   background-color: var(--line-color);
 }
-tr:nth-child(2n) > td {
+:is(tr:nth-child(2n), thead+tbody > tr:nth-child(2n+1)) > td {
   background-color: var(--background-color);
 }
-tr:nth-child(2n+1) > td {
+:is(tr:nth-child(2n+1), thead+tbody > tr:nth-child(2n)) > td {
   background-color: var(--highlight-color);
-}
-thead+tbody > tr:nth-child(2n) > td {
-  background-color: var(--highlight-color);
-}
-thead+tbody > tr:nth-child(2n+1) > td {
-  background-color: var(--background-color);
 }
 table caption {
   margin: 0;
@@ -549,8 +566,9 @@ hr {
 }
 .bcp14 {
   font-variant: small-caps;
+  font-weight: 600;
+  font-size: 14.5px;
 }
-
 .role {
   font-variant: all-small-caps;
 }
@@ -789,7 +807,7 @@ hr.addr {
     margin: 0 0 0 4px;
     font-size: var(--small-font-size);
   }
-  #toc ul p, #toc ul li {
+  #toc ul :is(p, li) {
     margin: 2px 0;
     line-height: 22px;
   }
@@ -899,13 +917,13 @@ dl.dlNewline > dt {
 }
 
 /* Provide styling for table cell text alignment */
-table .text-left, table .text-left {
+table .text-left {
   text-align: left;
 }
-table .text-center, table .text-center {
+table .text-center {
   text-align: center;
 }
-table .text-right, table .text-right {
+table .text-right {
   text-align: right;
 }
 
@@ -972,12 +990,6 @@ address div.right {
   }
 
 }
-/* Tweak the bcp14 keyword presentation */
-.bcp14 {
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 0.9em;
-}
 
 /* Dark mode. */
 @media (prefers-color-scheme: dark) {
@@ -992,19 +1004,20 @@ address div.right {
   --pilcrow-strong: #666;
   scrollbar-color: #777 #333;
 }
-/* Trick: a prefix match works because only black and white are allowed */
-svg [stroke="black"], svg [stroke^="#000"] {
+}
+
+/* SVG Trick: a prefix match works because only black and white are allowed */
+svg :is([stroke="black"], [stroke^="#000"]) {
   stroke: var(--text-color);
 }
-svg [stroke="white"], svg [stroke^="#fff"] {
+svg :is([stroke="white"], [stroke^="#fff"]) {
   stroke: var(--background-color);
 }
-svg [fill="black"], svg [fill^="#000"], svg :not([fill]) {
+svg :is([fill="black"], [fill^="#000"], :not([fill])) {
   fill: var(--text-color);
 }
-svg [stroke="fill"], svg [fill^="#fff"] {
+svg :is([stroke="fill"], [fill^="#fff"]) {
   fill: var(--background-color);
-}
 }
 </style>
 
@@ -1018,7 +1031,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Frost</td>
-<td class="center">Expires 3 December 2022</td>
+<td class="center">Expires 29 December 2022</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1031,12 +1044,12 @@ svg [stroke="fill"], svg [fill^="#fff"] {
 <dd class="internet-draft">draft-frost-rats-eat-collection-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-06-01" class="published">1 June 2022</time>
+<time datetime="2022-06-27" class="published">27 June 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2022-12-03">3 December 2022</time></dd>
+<dd class="expires"><time datetime="2022-12-29">29 December 2022</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1082,7 +1095,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 3 December 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 29 December 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1155,7 +1168,7 @@ svg [stroke="fill"], svg [fill^="#fff"] {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">An Attestation Token conforming to EAT <span>[<a href="#I-D.ietf-rats-eat" class="xref">I-D.ietf-rats-eat</a>]</span> has a default top level definition for a token to be constructed principally as a claim set within a CBOR Web Token (CWT) <span>[<a href="#RFC8392" class="xref">RFC8392</a>]</span> with the associated COSE envelope <span>[<a href="#RFC8152" class="xref">RFC8152</a>]</span> providing at least integrity and authentication. An equivalent JSON encoding for a JWT <span>[<a href="#RFC7519" class="xref">RFC7519</a>]</span> in a JWS envelope <span>[<a href="#RFC7515" class="xref">RFC7515</a>]</span> is supported as an alternative at the top-level definition.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-1">An Attestation Token conforming to EAT <span>[<a href="#I-D.ietf-rats-eat" class="xref">I-D.ietf-rats-eat</a>]</span> has a default top level definition for a token to be constructed principally as a claim set within a CBOR Web Token (CWT) <span>[<a href="#RFC8392" class="xref">RFC8392</a>]</span> with the associated COSE envelope <span>[<a href="#RFC8152" class="xref">RFC8152</a>]</span> providing at least integrity and authentication. An equivalent JSON encoding for a JWT <span>[<a href="#RFC7519" class="xref">RFC7519</a>]</span> in a JWS envelope <span>[<a href="#RFC7515" class="xref">RFC7515</a>]</span> is supported as an alternative at the top-level definition. The top level token can be augmented with related claims in a Detached Bundle (DEB).<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">For the use case of transmitting a claim set through a secure channel, the top-level definition can be extended to use an Unprotected CWT Claim Set (UCCS) <span>[<a href="#I-D.ietf-rats-uccs" class="xref">I-D.ietf-rats-uccs</a>]</span>.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">This document outlines an additional top-level extension for which neither of the above top level definitions match exactly: the attestation token consists of a collection of objects, each with their own integrity and some internally defined relationship through which the integrity of the whole collection can be determined. i.e. there is no top-level signer for the set. The objects may all share the same logical hierarchy in a device or have a hierarchy which is internally defined within the object set.<a href="#section-1-3" class="pilcrow">¶</a></p>
 </section>
@@ -1165,9 +1178,9 @@ svg [stroke="fill"], svg [fill^="#fff"] {
       <h2 id="name-design-considerations-use-c">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-design-considerations-use-c" class="section-name selfRef">Design Considerations / Use Cases</a>
       </h2>
-<p id="section-2-1">Take a device with an attestation system consisting of a platform claim set and a Workload claim set, each controlled by different components and with an underlying hardware Root of Trust. The two claim sets are delivered together to make up the overall attestation token. Depending upon the implementation and deployment use case, the signing system can either be entirely centric to the platform RoT or can have separate signers for the two claim sets. In either case, a cryptographic binding is established between the two parts of the token.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">A specific manifestation of such a device is one incorporating the Arm Confidential Compute Architecture (CCA) attestation token <span>[<a href="#Arm-CCA" class="xref">Arm-CCA</a>]</span>. In trying to prepare the attestation token using EAT, there were no issues constructing the claim sets or incorporating them into individual CWTs where appropriate. However, in trying to design an 'envelope structure' to convey the two parts as a single report it was found that maintaining EAT compatibility would require very different shaped compound tokens for different models, for example one based on a submod arrangement and another based on a DEB, though with different 'leading' objects. This would create extra code and explanation in areas where keeping things simple is desirable. There was an alternative approach considered, which stays close to existing thinking on EAT, which would be to create the wrapper from the UCCS EAT extension containing only submods for the respective components. This however stretches the current use case for UCCS beyond its existing description. Given recent WG thinking on separating UCCS from the core EAT specification to be an extension also encourages proposing this further extension.<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3">To support the CCA use case, also consider current attestation technologies which are based on certificate chains (e.g. SPDM, DICE, several key attestation systems). Here also are multiple objects with their own integrity and an internally defined relationship. If attempting to move such a technology to the EAT world, the same challenges apply.<a href="#section-2-3" class="pilcrow">¶</a></p>
+<p id="section-2-1">Take a device with an attestation system consisting of a platform claim set and a workload claim set, each controlled by different components and with an underlying hardware Root of Trust. The two claim sets are delivered together to make up the overall attestation token. Depending upon the implementation and deployment use case, the signing system can either be entirely centric to the platform RoT or can have separate signers for the two claim sets. In either case, a cryptographic binding is established between the two parts of the token.<a href="#section-2-1" class="pilcrow">¶</a></p>
+<p id="section-2-2">A specific manifestation of such a device is one incorporating the Arm Confidential Compute Architecture (CCA) attestation token <span>[<a href="#Arm-CCA" class="xref">Arm-CCA</a>]</span>. In trying to prepare the attestation token using EAT, there were no issues constructing the claim sets or incorporating them into individual CWTs where appropriate. However, in trying to design an 'envelope structure' to convey the two parts as a single report it was found that maintaining EAT compatibility would require very different shaped compound tokens for different models, for example one based on a submod arrangement and another based on a DEB, though with different 'leading' objects. This would create extra code and explanation in areas where keeping things simple is desirable. There was an alternative approach considered, which stays close to existing thinking on EAT, which would be to create the wrapper from the UCCS EAT extension containing only submods for the respective components. This however stretches the current use case for UCCS beyond its existing description. The RATS WG approach of separating UCCS from the core EAT specification to be an extension also encourages proposing this further extension.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-3">To support the CCA use case, it is also relevant to consider current attestation technologies which are based on certificate chains (e.g. SPDM, DICE, several key attestation systems). Here also are multiple objects with their own integrity and an internally defined relationship. If attempting to move such a technology to the EAT world, the same challenges apply.<a href="#section-2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="token-collection">
@@ -1186,7 +1199,11 @@ svg [stroke="fill"], svg [fill^="#fff"] {
       <h2 id="name-security-considerations">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-4-1">A verifier for an attestation token must apply a verification process for the full set of entries contained within the Token Collection. This process will be custom to the relevant profile for the Token Collection and take into account any individual verification per entry and/or verification for the objects considered collectively, including the intra token integrity scheme.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">A verifier for an attestation token must apply a verification process for the full set of entries contained within the Token Collection.
+This process will be custom to the relevant profile for the Token Collection and take into account any individual verification per entry and/or verification for the objects considered collectively, including the intra token integrity scheme.
+As there is no overall signature for the Collection, protection against malicious modification must be contained within the entries.
+It is expected that there exists a cryptographic binding between entries, this can for example be one to many or one to one in a (chain) series.
+Depending upon the use case and associated threat model, the freshness of entries may need extra consideration.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
@@ -1285,27 +1302,14 @@ $$EAT-CBOR-Tagged-Token /= Tagged-Collection
 $$EAT-CBOR-Untagged-Token /= TL-Collection
 
 Tagged-Collection =  #6.TBD399(TL-Collection)
-TL-Collection = CWT-Collection / JWT-Collection / DEB-Collection
 
 ; Note that although the common use cases for collections are for at least two entries in a collection,
 ; the CDDL below allows for &gt;= 1 entry to allow the scenario where only one entry is currently available even
 ; though the normal set is larger
-
-CWT-Collection = {
+TL-Collection = {
     ? eat-collection-identifier,
-    + cwt-collection-entries
+    + cwt-collection-entries // jwt-collection-entries // DEB-collection-entries
 }
-
-JWT-Collection = {
-    ? eat-collection-identifier,
-    + jwt-collection-entries
-}
-
-DEB-Collection= {
-    ? eat-collection-identifier,
-    + DEB-collection-entries
-}
-
 
 eat-collection-identifier = (
     profile-label =&gt; general-uri / general-oid
