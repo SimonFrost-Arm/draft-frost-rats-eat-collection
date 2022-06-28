@@ -4,8 +4,8 @@
 
 Remote ATtestation ProcedureS                                   S. Frost
 Internet-Draft                                                       Arm
-Intended status: Standards Track                            27 June 2022
-Expires: 29 December 2022
+Intended status: Standards Track                            28 June 2022
+Expires: 30 December 2022
 
 
              Entity Attestation Token (EAT) Collection Type
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 December 2022.
+   This Internet-Draft will expire on 30 December 2022.
 
 Copyright Notice
 
@@ -249,16 +249,19 @@ Appendix A.  CDDL
 
    Tagged-Collection =  #6.TBD399(TL-Collection)
 
-   ; Note that although the common use cases for collections are for at least two entries in a collection,
-   ; the CDDL below allows for >= 1 entry to allow the scenario where only one entry is currently available even
-   ; though the normal set is larger
    TL-Collection = {
        ? eat-collection-identifier,
-       + cwt-collection-entries // jwt-collection-entries // DEB-collection-entries
+       + all-collection-types
    }
 
    eat-collection-identifier = (
        profile-label => general-uri / general-oid
+   )
+
+   all-collection-types = (
+       cwt-collection-entries //
+       jwt-collection-entries //
+       DEB-collection-entries
    )
 
    cwt-collection-entries = (
