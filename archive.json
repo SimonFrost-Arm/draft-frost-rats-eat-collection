@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-06-28T00:46:20.974401+00:00",
+  "timestamp": "2022-06-30T00:42:31.686516+00:00",
   "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
   "labels": [
     {
@@ -91,16 +91,24 @@
       "id": "I_kwDOHZRuu85LJFkH",
       "title": "Support Mixed format collections",
       "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "SimonFrost-Arm",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "Per Laurence Lundblade review on RATS list: \"EAT collections don\u2019t support mixed devices. It\u2019s hard to tell right now if this will be a problem. Most folks are oriented around CBOR tokens, but JSON is very widely used.\"\r\nand a suggestion to look at the Nested Token CDDL in EAT to see if that provides the appropriate generality",
       "createdAt": "2022-06-04T07:27:21Z",
-      "updatedAt": "2022-06-04T07:28:07Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2022-06-28T08:18:47Z",
+      "closedAt": "2022-06-28T08:18:47Z",
+      "comments": [
+        {
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in draft-01",
+          "createdAt": "2022-06-28T08:18:47Z",
+          "updatedAt": "2022-06-28T08:18:47Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -156,6 +164,34 @@
       "mergedBy": "SimonFrost-Arm",
       "mergeCommit": {
         "oid": "3dad30a035497bfb15a3790f096bba59d3c52c71"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOHZRuu846eNAT",
+      "title": "tty format for linter line length fail",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/6",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-06-28T06:56:08Z",
+      "updatedAt": "2022-06-28T08:17:27Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "3dad30a035497bfb15a3790f096bba59d3c52c71",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "secconds",
+      "headRefOid": "b5f9d28b78700d08e60e41aeaed77bbe59c9efe9",
+      "closedAt": "2022-06-28T08:17:27Z",
+      "mergedAt": "2022-06-28T08:17:27Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "48afaa79d24b8285dfc4abf16edd4477d4bc4d9a"
       },
       "comments": [],
       "reviews": []
