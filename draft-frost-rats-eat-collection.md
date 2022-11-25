@@ -98,11 +98,17 @@ See {{cddl}} for a CDDL description of the proposed extension.
 While most of the use cases for collections are for scenarios where there will be at least two entries in a collection, the CDDL allows for >= 1 entries in a collection to allow for the scenario where only one entry is currently available even though the normal set is larger.
 
 ## Binder Definition
-This specification includes a proposal for a Collection Binder claim (see {{cddl}}). This claim would be
+This specification includes a proposal for a Collection Binder claim (see {{fig-binder}}). This claim would be
 included within any collection entry as a definiton of the integrity mechanism that binds that collection
 entry to another collection entry. A verifier can use the information within this claim to drive inter
 collection entry integrity checking. This claim would not be mandatory within a collection entry as a
 verifier may implement the integrity checking based upon information in the profile alone.
+
+~~~ cddl
+{::include cddl/collection-binder.cddl}
+~~~
+{: #fig-binder title="EAT collection binder" }
+
 The attributes within the binder claim are:
 
 + `binder-function`: the identity of the binding cryptographic function, usually a hash function, applied

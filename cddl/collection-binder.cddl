@@ -1,0 +1,25 @@
+; The Collection Binder is a formal declaration of the inter entry
+; binding mechanism. It would be included within the body of one or
+; more of the collection entries. 
+Collection-Binder = [
+    binder-function,
+    [*binder-source-label],
+    destination-collection-entry,
+    destination-claim
+]
+
+; binder-function is the name/id of a hash algorithm
+binder-function = JC<text,int>
+
+; By definition, the binder-function is applied to a concatenation
+; of the ordered list of source claims.
+; If the array is empty, the function is applied to the whole
+; contents of the token.
+binder-source-label = Claim-Label
+
+destination-collection-entry = collection-entry-label
+destination-claim = Claim-Label
+
+Claim-Label = JC<"text", int>
+collection-entry-label = JC<text, int>
+JC<J,C> = J .feature "json" / C .feature "cbor"
