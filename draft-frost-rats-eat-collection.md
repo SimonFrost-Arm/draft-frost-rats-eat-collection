@@ -85,6 +85,11 @@ A specific manifestation of such a device is one incorporating the Arm Confident
 
 To support the CCA use case, it is also relevant to consider current attestation technologies which are based on certificate chains (e.g. SPDM, DICE, several key attestation systems). Here also are multiple objects with their own integrity and an internally defined relationship. If attempting to move such a technology to the EAT world, the same challenges apply.
 
+An additional use case beyond the production of tokens from an Attester occurs when using EAT to convey Attestation Results from a Verifier.
+Attestation results may be separated into different sections depending upon what aspects of Appraisal Policy are applied by the Verifier.
+For example, the set of validated evidence claims may form one section, while claims reflecting semantic conclusions drawn by an Appraisal Policy could form another section.
+Given the role of different authorities in concluding result sections, each could have a different signer rather than all results being under a single signature from the Verifier. In this case, a collection can be used to collate all result sections into a single response message.
+
 # Token Collection
 
 The proposed extension for the top-level definition is to add a 'Token Collection' type. The contents of the type are a map of CWTs (JWTs). The Detached EAT Bundle top-level entry for EAT is included for completeness, and the UCCS extension can also be embraced, though the use cases for these have not been explored. The identification of collection members and the intra collection integrity mechanism is considered usage specific. A verifier will be expected to extract each of the members of the collection and check their validity both individually and as a set. In addition to entries which have their own integrity, it is also
@@ -133,7 +138,16 @@ A verifier for an attestation token must apply a verification process for the fu
 This process will be custom to the relevant profile for the Token Collection and take into account any individual verification per entry and/or verification for the objects considered collectively, including the intra token integrity scheme.
 As there is no overall signature for the Collection, protection against malicious modification must be contained within the entries.
 It is expected that there exists a cryptographic binding between entries, this can for example be one to many or one to one in a (chain) series.
+The implementation of creating these bindings may involve passing data across
+ABIs. This provides an attack vector on the integrity of the collection which
+must be considered within any threat model.
+With respect to binder claims, these require integrity protection.
+This protection can either be provided by the signature on the token entry
+which contains the binder or, in the case where the entry does not have a
+signature, by including the binder claim with any other claims when preparing
+input into a cryptographic binding function.
 Depending upon the use case and associated threat model, the freshness of entries may need extra consideration.
+
 
 # IANA Considerations
 
