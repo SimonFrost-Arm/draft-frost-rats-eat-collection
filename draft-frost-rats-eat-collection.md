@@ -145,7 +145,7 @@ With respect to binder claims, these require integrity protection.
 This protection can either be provided by the signature on the token entry
 which contains the binder or, in the case where the entry does not have a
 signature, by including the binder claim with any other claims when preparing
-input into a cryptographic binding function.
+input into the cryptographic binding function.
 Depending upon the use case and associated threat model, the freshness of entries may need extra consideration.
 
 
