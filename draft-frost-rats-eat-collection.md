@@ -39,6 +39,7 @@ normative:
 informative:
   I-D.ietf-rats-uccs:
   I-D.ietf-rats-architecture: rats-architecture
+  I-D.ietf--rats-ar4si: rats-ar4si
   RFC8392:
   STD96:
     -: cose
@@ -88,7 +89,9 @@ To support the CCA use case, it is also relevant to consider current attestation
 An additional use case beyond the production of tokens from an Attester occurs when using EAT to convey Attestation Results from a Verifier.
 Attestation results may be separated into different sections depending upon what aspects of Appraisal Policy are applied by the Verifier.
 For example, the set of validated evidence claims may form one section, while claims reflecting semantic conclusions drawn by an Appraisal Policy could form another section.
-Given the role of different authorities in concluding result sections, each could have a different signer rather than all results being under a single signature from the Verifier. In this case, a collection can be used to collate all result sections into a single response message.
+Given the role of different authorities in concluding result sections, each could have a different signer rather than all results being under a single signature from the Verifier. In this case, a collection can be used to collate all result sections into a single response message. Using a collection simplifies operations if individual sections from the collated result sections need to be later dispersed to different Relying Parties.
+
+A further Attestation Result use case can be seen in the "Below Zero Trust" system described in {{-rats-ar4si}} where the AR-augmented Evidence credential has compound form. 
 
 # Token Collection
 
@@ -145,7 +148,7 @@ With respect to binder claims, these require integrity protection.
 This protection can either be provided by the signature on the token entry
 which contains the binder or, in the case where the entry does not have a
 signature, by including the binder claim with any other claims when preparing
-input into a cryptographic binding function.
+input into the cryptographic binding function.
 Depending upon the use case and associated threat model, the freshness of entries may need extra consideration.
 
 
