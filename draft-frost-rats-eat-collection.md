@@ -39,7 +39,7 @@ normative:
 informative:
   I-D.ietf-rats-uccs:
   I-D.ietf-rats-architecture: rats-architecture
-  I-D.ietf--rats-ar4si: rats-ar4si
+  I-D.ietf-rats-ar4si: rats-ar4si
   RFC8392:
   STD96:
     -: cose
