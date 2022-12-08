@@ -91,7 +91,7 @@ Attestation results may be separated into different sections depending upon what
 For example, the set of validated evidence claims may form one section, while claims reflecting semantic conclusions drawn by an Appraisal Policy could form another section.
 Given the role of different authorities in concluding result sections, each could have a different signer rather than all results being under a single signature from the Verifier. In this case, a collection can be used to collate all result sections into a single response message. Using a collection simplifies operations if individual sections from the collated result sections need to be later dispersed to different Relying Parties.
 
-A further Attestation Result use case can be seen in the "Below Zero Trust" system described in {{-rats-ar4si}} where the AR-augmented Evidence credential has compound form. 
+A further Attestation Result use case can be seen in the "Below Zero Trust" system described in {{-rats-ar4si}} where the AR-augmented Evidence credential has compound form.
 
 # Token Collection
 
