@@ -39,6 +39,7 @@ normative:
 informative:
   I-D.ietf-rats-uccs:
   I-D.ietf-rats-architecture: rats-architecture
+  I-D.ietf-rats-ar4si: rats-ar4si
   RFC8392:
   STD96:
     -: cose
@@ -84,6 +85,13 @@ Take a device with an attestation system consisting of a platform claim set and 
 A specific manifestation of such a device is one incorporating the Arm Confidential Compute Architecture (CCA) attestation token {{Arm-CCA}}. In trying to prepare the attestation token using EAT, there were no issues constructing the claim sets or incorporating them into individual CWTs where appropriate. However, in trying to design an 'envelope structure' to convey the two parts as a single report it was found that maintaining EAT compatibility would require very different shaped compound tokens for different models, for example one based on a submod arrangement and another based on a Detached EAT Bundle, though with different ‘leading’ objects. This would create extra code and explanation in areas where keeping things simple is desirable. There was an alternative approach considered, which stays close to existing thinking on EAT, which would be to create the wrapper from the UCCS EAT extension containing only submods for the respective components. This however stretches the current use case for UCCS beyond its existing description. The RATS WG approach of separating UCCS from the core EAT specification to be an extension also encourages proposing this further extension.
 
 To support the CCA use case, it is also relevant to consider current attestation technologies which are based on certificate chains (e.g. SPDM, DICE, several key attestation systems). Here also are multiple objects with their own integrity and an internally defined relationship. If attempting to move such a technology to the EAT world, the same challenges apply.
+
+An additional use case beyond the production of tokens from an Attester occurs when using EAT to convey Attestation Results from a Verifier.
+Attestation results may be separated into different sections depending upon what aspects of Appraisal Policy are applied by the Verifier.
+For example, the set of validated evidence claims may form one section, while claims reflecting semantic conclusions drawn by an Appraisal Policy could form another section.
+Given the role of different authorities in concluding result sections, each could have a different signer rather than all results being under a single signature from the Verifier. In this case, a collection can be used to collate all result sections into a single response message. Using a collection simplifies operations if individual sections from the collated result sections need to be later dispersed to different Relying Parties.
+
+A further Attestation Result use case can be seen in the "Below Zero Trust" system described in {{-rats-ar4si}} where the AR-augmented Evidence credential has compound form.
 
 # Token Collection
 
@@ -133,7 +141,16 @@ A verifier for an attestation token must apply a verification process for the fu
 This process will be custom to the relevant profile for the Token Collection and take into account any individual verification per entry and/or verification for the objects considered collectively, including the intra token integrity scheme.
 As there is no overall signature for the Collection, protection against malicious modification must be contained within the entries.
 It is expected that there exists a cryptographic binding between entries, this can for example be one to many or one to one in a (chain) series.
+The implementation of creating these bindings may involve passing data across
+ABIs. This provides an attack vector on the integrity of the collection which
+must be considered within any threat model.
+With respect to binder claims, these require integrity protection.
+This protection can either be provided by the signature on the token entry
+which contains the binder or, in the case where the entry does not have a
+signature, by including the binder claim with any other claims when preparing
+input into the cryptographic binding function.
 Depending upon the use case and associated threat model, the freshness of entries may need extra consideration.
+
 
 # IANA Considerations
 
