@@ -40,6 +40,7 @@ informative:
   I-D.ietf-rats-uccs:
   I-D.ietf-rats-architecture: rats-architecture
   I-D.ietf-rats-ar4si: rats-ar4si
+  I-D.ietf-rats-eat-media-type: rats-eat-media-type
   RFC8392:
   STD96:
     -: cose
@@ -52,7 +53,12 @@ informative:
     title: "Confidential Compute Architecture"
     target: https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture
     date: 2022
-
+  IANA-MediaTypes:
+    author:
+      org: IANA
+    title: Media Types
+    target: http://www.iana.org/assignments/media-types
+    date: 2023
 entity:
   SELF: "RFCthis"
 
@@ -160,6 +166,39 @@ In the registry {{IANA.cbor-tags}}, IANA is requested to allocate the tag in {{t
 |---|---|---|
 | TBD399 | map | EAT Collection {{&SELF}} |
 {: #tbl-eat-collection align="left" title="EAT Collection"}
+
+## Media Type Registration
+{: #sec-iana-media-types}
+
+IANA is requested to register the "application/eat-collection" media type {{!RFC2046}} in the "Media Types" registry {{IANA-MediaTypes}} in the manner described in RFC 6838 {{!RFC6838}}, which can be used to indicate that the content is an EAT collection.
+
+The new media type extends the set of EAT media types introduced in {{-rats-eat-media-type}}.
+
+* Type name: application
+* Subtype name: eat-collection
+* Required parameters: n/a
+* Optional parameters: n/a
+* Encoding considerations: binary
+* Security considerations: See the Security Considerations section
+  of {{&SELF}}
+* Interoperability considerations: n/a
+* Published specification: {{&SELF}}
+* Applications that use this media type: Attesters, Relying Parties and Verifiers sending
+  EAT collection messages over HTTP(S) and other transports.
+* Fragment identifier considerations: n/a
+* Additional information:
+
+  * Magic number(s): n/a
+  * File extension(s): n/a
+  * Macintosh file type code(s): n/a
+
+* Person & email address to contact for further information:
+  Simon Frost, Simon.Frost@arm.com
+* Intended usage: COMMON
+* Restrictions on usage: none
+* Author: Simon Frost, Simon.Frost@arm.com
+* Change controller: IESG
+* Provisional registration?  No
 
 --- back
 
