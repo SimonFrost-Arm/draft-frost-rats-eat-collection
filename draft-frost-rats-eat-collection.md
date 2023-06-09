@@ -32,15 +32,14 @@ contributor:
 
 normative:
   I-D.ietf-rats-eat: eat
-  IANA.cbor-tags:
   RFC8610: cddl
   RFC9165: cddlplus
+  I-D.ietf-rats-eat-media-type: rats-eat-media-type
 
 informative:
   I-D.ietf-rats-uccs:
-  I-D.ietf-rats-architecture: rats-architecture
+  RFC9334: rats-architecture
   I-D.ietf-rats-ar4si: rats-ar4si
-  I-D.ietf-rats-eat-media-type: rats-eat-media-type
   RFC8392:
   STD96:
     -: cose
@@ -53,12 +52,8 @@ informative:
     title: "Confidential Compute Architecture"
     target: https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture
     date: 2022
-  IANA-MediaTypes:
-    author:
-      org: IANA
-    title: Media Types
-    target: http://www.iana.org/assignments/media-types
-    date: 2023
+  IANA.cbor-tags:
+  IANA.media-types:
 entity:
   SELF: "RFCthis"
 
@@ -170,7 +165,7 @@ In the registry {{IANA.cbor-tags}}, IANA is requested to allocate the tag in {{t
 ## Media Type Registration
 {: #sec-iana-media-types}
 
-IANA is requested to register the "application/eat-collection" media type {{!RFC2046}} in the "Media Types" registry {{IANA-MediaTypes}} in the manner described in RFC 6838 {{!RFC6838}}, which can be used to indicate that the content is an EAT collection.
+IANA is requested to register the "application/eat-collection" media type {{!RFC2046}} in the "Media Types" registry {{IANA.media-types}} in the manner described in {{!RFC6838}}, which can be used to indicate that the content is an EAT collection.
 
 The new media type extends the set of EAT media types introduced in {{-rats-eat-media-type}}.
 
