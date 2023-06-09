@@ -142,7 +142,8 @@ collection entry).
 
 A verifier for an attestation token must apply a verification process for the full set of entries contained within the Token Collection.
 This process will be custom to the relevant profile for the Token Collection and take into account any individual verification per entry and/or verification for the objects considered collectively, including the intra token integrity scheme.
-As there is no overall signature for the Collection, protection against malicious modification must be contained within the entries.
+As there is no overall signature for the Collection, protection against malicious modification MUST be contained within the entries.
+In general, a secure channel for the conveyance of EAT collections MUST provide at least end-to-end cryptographic integrity.
 It is expected that there exists a cryptographic binding between entries, this can for example be one to many or one to one in a (chain) series.
 The implementation of creating these bindings may involve passing data across
 ABIs. This provides an attack vector on the integrity of the collection which
