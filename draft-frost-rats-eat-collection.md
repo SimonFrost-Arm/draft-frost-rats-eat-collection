@@ -222,7 +222,7 @@ all-collection-types = (
     cwt-collection-entries //
     jwt-collection-entries //
     claim-set-collection-entries //
-    detatched-eat-bundle-collection-entries
+    detached-eat-bundle-collection-entries
 )
 
 cwt-collection-entries = (
@@ -238,7 +238,7 @@ claim-set-collection-entries = (
                                  cbor-wrapped-claims-set>
 )
 
-detatched-eat-bundle-collection-entries = (
+detached-eat-bundle-collection-entries = (
     collection-entry-label => BUNDLE-Messages
 )
 
