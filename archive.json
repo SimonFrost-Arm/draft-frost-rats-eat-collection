@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-01-22T00:43:24.780854+00:00",
+  "timestamp": "2023-07-11T00:35:44.797971+00:00",
   "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
   "labels": [
     {
@@ -957,6 +957,48 @@
           "body": "LGTM",
           "createdAt": "2023-01-20T10:47:18Z",
           "updatedAt": "2023-01-20T10:47:18Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOHZRuu85VFcdH",
+      "title": "Fix typos",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/16",
+      "state": "MERGED",
+      "author": "yogeshbdeshpande",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Minor tidy up with CDDL names",
+      "createdAt": "2023-07-10T13:05:13Z",
+      "updatedAt": "2023-07-10T13:16:17Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "119aa898851d2df8fb4c634246f97aff0b1cab69",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "nits",
+      "headRefOid": "c5d2bfff637c1eb51a02b1d1e5f8f4f12e4d1404",
+      "closedAt": "2023-07-10T13:16:08Z",
+      "mergedAt": "2023-07-10T13:16:08Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "210f7f4cd389cd724a931b33f7a49f519bf67793"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85auM1C",
+          "commit": {
+            "abbreviatedOid": "c5d2bff"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-07-10T13:16:00Z",
+          "updatedAt": "2023-07-10T13:16:00Z",
           "comments": []
         }
       ]
