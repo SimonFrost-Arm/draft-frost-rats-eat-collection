@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-12-05T01:14:30.377231+00:00",
+  "timestamp": "2023-12-07T01:13:56.312805+00:00",
   "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
   "labels": [
     {
@@ -204,6 +204,22 @@
           "updatedAt": "2023-01-19T13:07:26Z"
         }
       ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOHZRuu854xLsj",
+      "title": "generalise the collection to non-EAT types?",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/17",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[Conceptual Message Wrappers](https://datatracker.ietf.org/doc/draft-ietf-rats-msg-wrap) allow encapsulating any RATS message into a uniform, typed item, which can be easily plugged into JSON / CBOR containers.\r\n\r\nA Collection could be a more scalable container if it allowed CMWs as its values.",
+      "createdAt": "2023-12-05T13:08:25Z",
+      "updatedAt": "2023-12-05T13:08:25Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
