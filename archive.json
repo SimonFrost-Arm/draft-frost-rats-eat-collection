@@ -1,0 +1,1023 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2024-06-18T01:18:08.193154+00:00",
+  "repo": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOHZRuu85KvJC9",
+      "title": "Suggestion to change min # of collection entries to 1",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/1",
+      "state": "CLOSED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "SimonFrost-Arm"
+      ],
+      "labels": [],
+      "body": "Per Carl Wallace feedback:\r\nSuggest changing the minimum number of *-collection-entries from 2 to 1 to allow for the case where normally there are several items but it is possible only one is available. \r\n",
+      "createdAt": "2022-05-31T13:28:40Z",
+      "updatedAt": "2022-06-01T11:11:35Z",
+      "closedAt": "2022-06-01T11:11:35Z",
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOHZRuu85KvKXT",
+      "title": "Remove placeholder CDDL from doc",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/2",
+      "state": "CLOSED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "SimonFrost-Arm"
+      ],
+      "labels": [],
+      "body": "BUG CWT placeholder present in doc  (and above placeholder comment in CDDL file).  \r\nConsider resolution to change to include <eat combined CDDL>\r\n",
+      "createdAt": "2022-05-31T13:32:54Z",
+      "updatedAt": "2022-06-01T11:11:17Z",
+      "closedAt": "2022-06-01T11:11:17Z",
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOHZRuu85LJFkH",
+      "title": "Support Mixed format collections",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/4",
+      "state": "CLOSED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Per Laurence Lundblade review on RATS list: \"EAT collections don\u2019t support mixed devices. It\u2019s hard to tell right now if this will be a problem. Most folks are oriented around CBOR tokens, but JSON is very widely used.\"\r\nand a suggestion to look at the Nested Token CDDL in EAT to see if that provides the appropriate generality",
+      "createdAt": "2022-06-04T07:27:21Z",
+      "updatedAt": "2022-06-28T08:18:47Z",
+      "closedAt": "2022-06-28T08:18:47Z",
+      "comments": [
+        {
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "body": "Fixed in draft-01",
+          "createdAt": "2022-06-28T08:18:47Z",
+          "updatedAt": "2022-06-28T08:18:47Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOHZRuu85O7kZP",
+      "title": "add AR-augmented Evidence to the use cases?",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/7",
+      "state": "CLOSED",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "AR-augmented Evidence ([\u00a73.2 of AR4SI](https://www.ietf.org/archive/id/draft-ietf-rats-ar4si-02.html#section-3.2)) is a structure which aggregates and binds \u2018claims\u2019 from both the Verifier and Attester.  It is therefore an excellent candidate for an EAT collection.",
+      "createdAt": "2022-08-01T11:07:05Z",
+      "updatedAt": "2022-12-08T14:15:11Z",
+      "closedAt": "2022-12-08T14:15:11Z",
+      "comments": [
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "body": "/cc @ericvoit",
+          "createdAt": "2022-08-01T11:08:18Z",
+          "updatedAt": "2022-08-01T11:08:18Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOHZRuu85V1TQu",
+      "title": "the binder claim must be integrity protected",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/10",
+      "state": "CLOSED",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Either via the signature of the token in which it's found or, if in a UCCS, by adding it into the \"projection\" onto the linked token.\r\n\r\nIt's obvious, but better stating this explicitly.",
+      "createdAt": "2022-11-08T11:44:35Z",
+      "updatedAt": "2022-12-08T14:15:11Z",
+      "closedAt": "2022-12-08T14:15:11Z",
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOHZRuu85WkUyu",
+      "title": "`destination-claim` is a dangerous degree of freedom",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/11",
+      "state": "CLOSED",
+      "author": "mathias-arm",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "One example is setting `destination-claim` to EAT `nonce`, I can use an EAT token from an entity that thinks it is participating in a remote attestation protocol to look like it is the top-level signer of a collection.\r\n\r\nA dedicated claim for the \"binder destination\" would allow for explicit participation in the binding from the top-level signer. That claim should be multi-valued if we want to support the full potential scope that `destination-claim` brings.\r\n\r\nLeaving `destination-claim`, potentially as optional (absence of which would imply dedicated claim defined in previous paragraph), would require some fuzzy requirement that the claim \"cannot be abused\". This requirement might prove very difficult to automate.",
+      "createdAt": "2022-11-16T22:23:31Z",
+      "updatedAt": "2022-12-08T14:15:12Z",
+      "closedAt": "2022-12-08T14:15:12Z",
+      "comments": [
+        {
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "body": "I'm not sure that the dedicated claim will help as an attacker could create a scenario where they try to manipulate that claim. I think that any implementation for binding claims needs to consider the data passing mechanism for that binding and how it might be attacked/protected. I've added a statement to that effect to the security considerations.\r\nCan you have a look at https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/13 please & see if I've covered that sufficiently?",
+          "createdAt": "2022-11-29T14:31:24Z",
+          "updatedAt": "2022-11-29T14:31:24Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOHZRuu85cVOZ_",
+      "title": "Need to register a suitable Media Type for EAT Collection",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/14",
+      "state": "CLOSED",
+      "author": "yogeshbdeshpande",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "EAT Collection draft, needs to have a suitable Media Type to indicate that the associated content pertains to an EAT Collection",
+      "createdAt": "2023-01-19T12:33:55Z",
+      "updatedAt": "2023-01-20T10:47:31Z",
+      "closedAt": "2023-01-20T10:47:31Z",
+      "comments": [
+        {
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This change is required so that the CCA implementation is inline with the specification",
+          "createdAt": "2023-01-19T12:37:51Z",
+          "updatedAt": "2023-01-19T12:37:51Z"
+        },
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "body": "To add a bit more context:\r\n\r\nThe EAT collection is a new top-level object in the EAT type system (see [here](https://www.ietf.org/archive/id/draft-ietf-rats-eat-media-type-01.html#name-eat-types-2) for how it looks like at the moment.). Therefore, similar to [`eat-cwt` & co](https://www.ietf.org/archive/id/draft-ietf-rats-eat-media-type-01.html#section-6), a new media type needs to be defined.\r\n\r\nNote that the new media type can be [parametrised based on profile](https://www.ietf.org/archive/id/draft-ietf-rats-eat-media-type-01.html#section-3), which allows us to use it when submitting CCA tokens to Veraison's for verification without the need to register a CCA-specific media type.\r\n",
+          "createdAt": "2023-01-19T13:06:36Z",
+          "updatedAt": "2023-01-19T13:07:26Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOHZRuu854xLsj",
+      "title": "generalise the collection to non-EAT types?",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/issues/17",
+      "state": "OPEN",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "[Conceptual Message Wrappers](https://datatracker.ietf.org/doc/draft-ietf-rats-msg-wrap) allow encapsulating any RATS message into a uniform, typed item, which can be easily plugged into JSON / CBOR containers.\r\n\r\nA Collection could be a more scalable container if it allowed CMWs as its values.",
+      "createdAt": "2023-12-05T13:08:25Z",
+      "updatedAt": "2023-12-05T13:08:25Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOHZRuu8441yza",
+      "title": "Address issues #1 and #2 from public review of draft-00",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/3",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-06-01T11:09:52Z",
+      "updatedAt": "2022-06-01T11:10:44Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "7ac911b5d001a234f8287058609475be798d4fb1",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "draft1",
+      "headRefOid": "1c2f6c65d129e7ca8b6721eb6d0f49e5e58633e8",
+      "closedAt": "2022-06-01T11:10:39Z",
+      "mergedAt": "2022-06-01T11:10:39Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "52fe05f25df41ef6e057bff2dde4357411f32db8"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOHZRuu846blSW",
+      "title": "additional clarification text + CDDL changes for mixed token, issue 4",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/5",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-06-27T16:56:42Z",
+      "updatedAt": "2022-06-27T17:19:45Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "52fe05f25df41ef6e057bff2dde4357411f32db8",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "secconds",
+      "headRefOid": "bed6045fa1054606debdc4e21d4391d698f4a221",
+      "closedAt": "2022-06-27T17:19:40Z",
+      "mergedAt": "2022-06-27T17:19:40Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "3dad30a035497bfb15a3790f096bba59d3c52c71"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOHZRuu846eNAT",
+      "title": "tty format for linter line length fail",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/6",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-06-28T06:56:08Z",
+      "updatedAt": "2022-06-28T08:17:27Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "3dad30a035497bfb15a3790f096bba59d3c52c71",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "secconds",
+      "headRefOid": "b5f9d28b78700d08e60e41aeaed77bbe59c9efe9",
+      "closedAt": "2022-06-28T08:17:27Z",
+      "mergedAt": "2022-06-28T08:17:27Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "48afaa79d24b8285dfc4abf16edd4477d4bc4d9a"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOHZRuu85BdJDR",
+      "title": "DEB terminology update, Add ClaimSets,Add Binder defn",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/8",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Prep for new release",
+      "createdAt": "2022-10-24T23:18:33Z",
+      "updatedAt": "2022-10-25T00:20:58Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "48afaa79d24b8285dfc4abf16edd4477d4bc4d9a",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "rev2",
+      "headRefOid": "9688d3404aaeed9aaaf36509b40731329379c34c",
+      "closedAt": "2022-10-25T00:20:49Z",
+      "mergedAt": "2022-10-25T00:20:49Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "32d761063d1f438275bab0081f364f99840b817e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOHZRuu85BksPm",
+      "title": "small (typographic) fixes",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/9",
+      "state": "MERGED",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "A bunch of small typographic fixes, specifically:\r\n\r\n* enforce 72 char limit in CDDL comments\r\n* add the usual \"Terminology and Requirement Language\" section\r\n* bulleted list need a NL to render properly\r\n* fix COSE ref (9052 obsoletes 8152)\r\n* highlight terms in the binder definition\r\n* fix CCA reference entry",
+      "createdAt": "2022-10-26T11:31:25Z",
+      "updatedAt": "2022-11-25T11:28:26Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "32d761063d1f438275bab0081f364f99840b817e",
+      "headRepository": "thomas-fossati/draft-frost-rats-eat-collection",
+      "headRefName": "main",
+      "headRefOid": "e6b8ac255faed930842dd5d2ed8bc77de601174e",
+      "closedAt": "2022-11-25T11:28:26Z",
+      "mergedAt": "2022-11-25T11:28:26Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "9f36cd3f147732315402f6ee69364fc4ffa4a428"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85HL5Hg",
+          "commit": {
+            "abbreviatedOid": "e6b8ac2"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-11-25T11:28:08Z",
+          "updatedAt": "2022-11-25T11:28:08Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOHZRuu85DtClc",
+      "title": "separate the binder CDDL from the EAT collection proper...",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/12",
+      "state": "MERGED",
+      "author": "thomas-fossati",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "...and include it in the relevant section",
+      "createdAt": "2022-11-25T11:58:53Z",
+      "updatedAt": "2022-11-25T12:03:20Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "9f36cd3f147732315402f6ee69364fc4ffa4a428",
+      "headRepository": "thomas-fossati/draft-frost-rats-eat-collection",
+      "headRefName": "main",
+      "headRefOid": "8ae5e08c297ad68a0c8fa49c1c37b92dbd1778a6",
+      "closedAt": "2022-11-25T12:03:19Z",
+      "mergedAt": "2022-11-25T12:03:19Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "ae5f0898aae9da8ebceb8546fb0724e51cf8d9eb"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85HMDnH",
+          "commit": {
+            "abbreviatedOid": "8ae5e08"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-11-25T12:03:13Z",
+          "updatedAt": "2022-11-25T12:03:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "PR_kwDOHZRuu85D5DMY",
+      "title": "Add AR use case + Binder Security statements for Issues 7, 10, 11",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/13",
+      "state": "MERGED",
+      "author": "SimonFrost-Arm",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Fix #7: Attestation Results added to use cases\r\nFix #10: Statement about binder integrity added to Security Considerations\r\nFix #11: Irrespective of the destination claim, the risk occurs by attacks on a data passing mechanism between entry creation components. Addressing this by adding a need to consider this in a threat model to Security Considerations.",
+      "createdAt": "2022-11-29T14:08:29Z",
+      "updatedAt": "2022-12-08T14:15:14Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "ae5f0898aae9da8ebceb8546fb0724e51cf8d9eb",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "issues7-10-11",
+      "headRefOid": "af0f1c1f488697961c5e597b4838ec04d041b4ef",
+      "closedAt": "2022-12-08T14:15:09Z",
+      "mergedAt": "2022-12-08T14:15:09Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "58f8b6f9ed11c5722adb86a57efd93ce9c6c7102"
+      },
+      "comments": [
+        {
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "body": "LGTM, thanks!",
+          "createdAt": "2022-12-08T14:05:26Z",
+          "updatedAt": "2022-12-08T14:05:26Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85HY6Lh",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "nice stuff!  Two suggestions inlined.",
+          "createdAt": "2022-11-29T14:51:15Z",
+          "updatedAt": "2022-11-29T14:57:10Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "I'd add that this enables the collection to be split at a later point in the processing chain if different relying parties need to consume different parts of the Attestation Results.",
+              "createdAt": "2022-11-29T14:51:15Z",
+              "updatedAt": "2022-11-29T14:58:25Z"
+            },
+            {
+              "originalPosition": 4,
+              "body": "Yet another case that is worth mentioning is that of AR-augmented Evidence `{{Section 3.2 of I-D.ietf-rats-ar4si}}`",
+              "createdAt": "2022-11-29T14:56:01Z",
+              "updatedAt": "2022-11-29T14:57:10Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\r\ninput into the cryptographic binding function.\r\n```",
+              "createdAt": "2022-11-29T14:56:43Z",
+              "updatedAt": "2022-11-29T14:57:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IIJmK",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T13:39:58Z",
+          "updatedAt": "2022-12-08T13:39:58Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Added, please check latest commits",
+              "createdAt": "2022-12-08T13:39:58Z",
+              "updatedAt": "2022-12-08T13:39:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IIJoF",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T13:40:02Z",
+          "updatedAt": "2022-12-08T13:40:03Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Added, please check latest commits",
+              "createdAt": "2022-12-08T13:40:02Z",
+              "updatedAt": "2022-12-08T13:40:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IILYm",
+          "commit": {
+            "abbreviatedOid": "2a83742"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T13:44:37Z",
+          "updatedAt": "2022-12-08T13:44:38Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n  I-D.ietf-rats-ar4si: rats-ar4si\r\n```",
+              "createdAt": "2022-12-08T13:44:37Z",
+              "updatedAt": "2022-12-08T13:44:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IIM1s",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T13:48:37Z",
+          "updatedAt": "2022-12-08T13:48:37Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "for some reason I don't see this.  Maybe a case of forgotten commit / bad merge?",
+              "createdAt": "2022-12-08T13:48:37Z",
+              "updatedAt": "2022-12-08T13:48:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IIQYM",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T13:57:52Z",
+          "updatedAt": "2022-12-08T13:57:53Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Should be part of [d570a3d] (added the sentence: \"Using a collection simplifies operations if individual sections from the collated result sections need to be later dispersed to different Relying Parties.\")",
+              "createdAt": "2022-12-08T13:57:52Z",
+              "updatedAt": "2022-12-08T13:57:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85IITP7",
+          "commit": {
+            "abbreviatedOid": "4d5c226"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-12-08T14:05:09Z",
+          "updatedAt": "2022-12-08T14:05:09Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "apologies, it was a case of me looking in the wrong place.",
+              "createdAt": "2022-12-08T14:05:09Z",
+              "updatedAt": "2022-12-08T14:05:09Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "id": "PR_kwDOHZRuu85II_dV",
+      "title": "Add Media Type",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/15",
+      "state": "MERGED",
+      "author": "yogeshbdeshpande",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #14",
+      "createdAt": "2023-01-19T16:00:31Z",
+      "updatedAt": "2023-01-20T10:47:47Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "58f8b6f9ed11c5722adb86a57efd93ce9c6c7102",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "media-type",
+      "headRefOid": "c60423e422ad682f7a8e70c228bc189e87bf5c1c",
+      "closedAt": "2023-01-20T10:47:30Z",
+      "mergedAt": "2023-01-20T10:47:30Z",
+      "mergedBy": "yogeshbdeshpande",
+      "mergeCommit": {
+        "oid": "3cfd25822fc92ed250b64b071eec4d93e8a2cf2d"
+      },
+      "comments": [
+        {
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@SimonFrost-Arm  Do you want to have a look or shall we merge?",
+          "createdAt": "2023-01-20T10:09:14Z",
+          "updatedAt": "2023-01-20T10:09:14Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85LOnHQ",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "LGTM\r\n\r\nOne overall comment is we should probably also have a small paragraph somewhere in the draft that says that this new thing builds on top of (and extends) the EAT media types.",
+          "createdAt": "2023-01-19T16:15:37Z",
+          "updatedAt": "2023-01-19T16:22:01Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\n    date: 2023\r\n```",
+              "createdAt": "2023-01-19T16:15:37Z",
+              "updatedAt": "2023-01-19T16:22:01Z"
+            },
+            {
+              "originalPosition": 33,
+              "body": "```suggestion\r\n* Applications that use this media type: Attesters and Relying Parties sending\r\n  EAT collection attestation evidence over HTTP(S) and other transports.\r\n```",
+              "createdAt": "2023-01-19T16:16:54Z",
+              "updatedAt": "2023-01-19T16:22:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPFJ3",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:17:50Z",
+          "updatedAt": "2023-01-19T17:17:51Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "It is a well formed token, and not a raw evidence, so I kept is as it is. Perhaps we should use token instead of tokens",
+              "createdAt": "2023-01-19T17:17:51Z",
+              "updatedAt": "2023-01-19T17:18:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPLPB",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:25:16Z",
+          "updatedAt": "2023-01-19T17:25:17Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "In RATS parlance there is no \"raw\" evidence, just evidence.  So I am not sure what is the distinction you are trying to make here.  Also, \"token\" is an Arm-specific term that we have used for CCA and PSA but does not necessarily fit the wider RATS context.",
+              "createdAt": "2023-01-19T17:25:16Z",
+              "updatedAt": "2023-01-19T17:25:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPMkL",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:27:46Z",
+          "updatedAt": "2023-01-19T17:27:47Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "maybe better saying: \"[...] sending attestation messages over HTTP(S) [...]\" because the EAT collection could be used to encapsulate attestation results too.",
+              "createdAt": "2023-01-19T17:27:46Z",
+              "updatedAt": "2023-01-19T17:27:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPN0v",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:30:08Z",
+          "updatedAt": "2023-01-19T17:30:09Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "yes, this makes more sense,  I will change this!",
+              "createdAt": "2023-01-19T17:30:08Z",
+              "updatedAt": "2023-01-19T17:30:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPOE7",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:30:40Z",
+          "updatedAt": "2023-01-19T17:30:40Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "But notice the word token already used in the draft 3 times!!!",
+              "createdAt": "2023-01-19T17:30:40Z",
+              "updatedAt": "2023-01-19T17:30:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPO8l",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:32:30Z",
+          "updatedAt": "2023-01-19T17:32:30Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Correction: Attestation Token is used 8 times in the draft. ",
+              "createdAt": "2023-01-19T17:32:30Z",
+              "updatedAt": "2023-01-19T17:32:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPPfj",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:33:43Z",
+          "updatedAt": "2023-01-19T17:33:44Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "And remember EAT stands for \"Entity Attestation Token\" so nothing wrong in using the word, token!",
+              "createdAt": "2023-01-19T17:33:43Z",
+              "updatedAt": "2023-01-19T17:33:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPTG1",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:41:18Z",
+          "updatedAt": "2023-01-19T17:41:19Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "Sure, no one will be harmed by the use of the t-word :)\r\n\r\nHowever, IMO all new documents should make the effort of aligning with RATS terminology.",
+              "createdAt": "2023-01-19T17:41:19Z",
+              "updatedAt": "2023-01-19T17:41:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPUxJ",
+          "commit": {
+            "abbreviatedOid": "bf7281f"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:45:50Z",
+          "updatedAt": "2023-01-19T17:45:51Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "I will change this to message so that it applies to Attestation Results also going forward.",
+              "createdAt": "2023-01-19T17:45:50Z",
+              "updatedAt": "2023-01-19T17:45:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPVnT",
+          "commit": {
+            "abbreviatedOid": "8515dda"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:47:56Z",
+          "updatedAt": "2023-01-19T17:47:56Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\nThis new media type extends the set of EAT media types introduced in {{-rats-eat-media-type}}.\r\n```",
+              "createdAt": "2023-01-19T17:47:56Z",
+              "updatedAt": "2023-01-19T17:47:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPW3X",
+          "commit": {
+            "abbreviatedOid": "11b9686"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T17:51:40Z",
+          "updatedAt": "2023-01-19T17:51:41Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\r\n* Applications that use this media type: Attesters, Relying Parties and\r\n  Verifiers sending EAT collection messages over HTTP(S) and other transports.\r\n```",
+              "createdAt": "2023-01-19T17:51:40Z",
+              "updatedAt": "2023-01-19T17:51:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LPg6d",
+          "commit": {
+            "abbreviatedOid": "53fab09"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-19T18:18:21Z",
+          "updatedAt": "2023-01-19T18:18:22Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "quibbling: \"attestation\" is made redundant by the very clear and specialised context.",
+              "createdAt": "2023-01-19T18:18:21Z",
+              "updatedAt": "2023-01-19T18:18:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LSz1T",
+          "commit": {
+            "abbreviatedOid": "53fab09"
+          },
+          "author": "yogeshbdeshpande",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-20T09:36:45Z",
+          "updatedAt": "2023-01-20T09:36:45Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "Yes, I spotted it yesterday, but got to rush home so did not made the commit. Will do it now!",
+              "createdAt": "2023-01-20T09:36:45Z",
+              "updatedAt": "2023-01-20T09:36:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LS-Sk",
+          "commit": {
+            "abbreviatedOid": "9e084c2"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-01-20T10:07:39Z",
+          "updatedAt": "2023-01-20T10:07:40Z",
+          "comments": [
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\nThe new media type extends the set of EAT media types introduced in {{-rats-eat-media-type}}.\r\n```",
+              "createdAt": "2023-01-20T10:07:39Z",
+              "updatedAt": "2023-01-20T10:07:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LS-jX",
+          "commit": {
+            "abbreviatedOid": "e39d2ff"
+          },
+          "author": "thomas-fossati",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2023-01-20T10:08:27Z",
+          "updatedAt": "2023-01-20T10:08:27Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOHZRuu85LTLOu",
+          "commit": {
+            "abbreviatedOid": "c60423e"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2023-01-20T10:47:18Z",
+          "updatedAt": "2023-01-20T10:47:18Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOHZRuu85VFcdH",
+      "title": "Fix typos",
+      "url": "https://github.com/SimonFrost-Arm/draft-frost-rats-eat-collection/pull/16",
+      "state": "MERGED",
+      "author": "yogeshbdeshpande",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Minor tidy up with CDDL names",
+      "createdAt": "2023-07-10T13:05:13Z",
+      "updatedAt": "2023-07-10T13:16:17Z",
+      "baseRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "baseRefName": "main",
+      "baseRefOid": "119aa898851d2df8fb4c634246f97aff0b1cab69",
+      "headRepository": "SimonFrost-Arm/draft-frost-rats-eat-collection",
+      "headRefName": "nits",
+      "headRefOid": "c5d2bfff637c1eb51a02b1d1e5f8f4f12e4d1404",
+      "closedAt": "2023-07-10T13:16:08Z",
+      "mergedAt": "2023-07-10T13:16:08Z",
+      "mergedBy": "SimonFrost-Arm",
+      "mergeCommit": {
+        "oid": "210f7f4cd389cd724a931b33f7a49f519bf67793"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOHZRuu85auM1C",
+          "commit": {
+            "abbreviatedOid": "c5d2bff"
+          },
+          "author": "SimonFrost-Arm",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-07-10T13:16:00Z",
+          "updatedAt": "2023-07-10T13:16:00Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
