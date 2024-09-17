@@ -4,8 +4,8 @@
 
 Remote ATtestation ProcedureS                                   S. Frost
 Internet-Draft                                                       Arm
-Intended status: Standards Track                            10 July 2023
-Expires: 11 January 2024
+Intended status: Standards Track                       17 September 2024
+Expires: 21 March 2025
 
 
              Entity Attestation Token (EAT) Collection Type
@@ -46,11 +46,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 January 2024.
+   This Internet-Draft will expire on 21 March 2025.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -375,16 +375,16 @@ Table of Contents
    [I-D.ietf-rats-eat]
               Lundblade, L., Mandyam, G., O'Donoghue, J., and C.
               Wallace, "The Entity Attestation Token (EAT)", Work in
-              Progress, Internet-Draft, draft-ietf-rats-eat-21, 30 June
-              2023, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              rats-eat-21>.
+              Progress, Internet-Draft, draft-ietf-rats-eat-31, 6
+              September 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-rats-eat-31>.
 
    [I-D.ietf-rats-eat-media-type]
               Lundblade, L., Birkholz, H., and T. Fossati, "EAT Media
               Types", Work in Progress, Internet-Draft, draft-ietf-rats-
-              eat-media-type-03, 4 July 2023,
+              eat-media-type-09, 21 August 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-rats-
-              eat-media-type-03>.
+              eat-media-type-09>.
 
    [RFC2046]  Freed, N. and N. Borenstein, "Multipurpose Internet Mail
               Extensions (MIME) Part Two: Media Types", RFC 2046,
@@ -426,15 +426,16 @@ Table of Contents
               Voit, E., Birkholz, H., Hardjono, T., Fossati, T., and V.
               Scarlata, "Attestation Results for Secure Interactions",
               Work in Progress, Internet-Draft, draft-ietf-rats-ar4si-
-              04, 2 March 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-rats-ar4si-04>.
+              07, 2 September 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-rats-
+              ar4si-07>.
 
    [I-D.ietf-rats-uccs]
               Birkholz, H., O'Donoghue, J., Cam-Winget, N., and C.
               Bormann, "A CBOR Tag for Unprotected CWT Claims Sets",
-              Work in Progress, Internet-Draft, draft-ietf-rats-uccs-05,
-              1 February 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-rats-uccs-05>.
+              Work in Progress, Internet-Draft, draft-ietf-rats-uccs-10,
+              4 July 2024, <https://datatracker.ietf.org/doc/html/draft-
+              ietf-rats-uccs-10>.
 
    [IANA.cbor-tags]
               IANA, "Concise Binary Object Representation (CBOR) Tags",
